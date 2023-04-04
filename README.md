@@ -10,7 +10,7 @@ A computational model of the theory of recursive reminding suggesting that human
 ## Approach
 Iterative approach to effectively use guidance obtained from various agents:
 
-- Background Knowledge as guidance (pre-large models):
+### Background Knowledge as guidance (pre-large models):
 |.|details|
 |---|---|
 |pre-constructed KG | canonical WebChild-KB [1], free form triples [2] |
@@ -19,7 +19,7 @@ Iterative approach to effectively use guidance obtained from various agents:
 |on-the-fly generated KG| inference graphs [4] |
 
 
-- Feedback as guidance:
+### Feedback as guidance:
 |.|details|
 |---|---|
 |human| Interscript [11] |
@@ -28,7 +28,7 @@ Iterative approach to effectively use guidance obtained from various agents:
 |Self| Self-Refine [10] |
 
 
-- Schemas as guidance:
+### Schemas as guidance:
 |.|details|
 |---|---|
 |dyadic theory from psychology| todo |
