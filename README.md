@@ -3,51 +3,78 @@
 ## Problem
 Models can be unreasonable and large models can be hard to finetune, can we guide them at inference time? Guidance takes up different forms such as corrections, knowledge, Web retrieval based guidance, and theories and schemas e.g. from psychology, and human preferences. Visionaries in AI and psychology have considered feedback and correction (i.e., guidance) as a requirement for truly intelligent AI systems that learn from errors and improve with time.
 
-
 ## Goal
-A computational model of the theory of recursive reminding suggesting that humans record error context and correction received in their episodic memory for the future. To realize this, we need a general memory architecture where input = question, output = critiqueable output and then guidance from various agents can iteratively improve the output. This memory can be per user, thus leading to personalized models.
+A computational model of the theory of recursive reminding that suggests humans record error context and correction received in their episodic memory for the future. To realize this, we need a general memory architecture where input = question, output = critiqueable output and then guidance from various agents can iteratively improve the output. This memory can be per user, thus leading to `personalized models`.
 
 ## Approach
-Iterative approach to effectively use guidance obtained from various agents:
-
-### Background Knowledge as guidance (pre-large models):
-|.|details|
-|---|---|
-|pre-constructed KG | canonical WebChild-KB [1], free form triples [2] |
-|pre-designed rules| Verb-rules [8] |
-|pre-compiled sentences or paragraphs| hasPart-KB [7] |
-|on-the-fly generated KG| inference graphs [4] |
+Iterative approach to effectively use guidance obtained from various critics. We build upon four key questions:
+- Who to ask
+- What to ask
+- When to ask
+- How to apply
 
 
-### Feedback as guidance:
-|.|details|
-|---|---|
-|human| Interscript [11] |
-|supervised| Learning-to-repair [9] |
-|RL| ACL 2023 (under review)  |
-|Self| Self-Refine [10] |
-
-
-### Schemas as guidance:
-|.|details|
-|---|---|
-|dyadic theory from psychology| todo |
-|state tracking from planning| todo |
-|claim graphs from scholar | todo |
-
-
-### Open research questions:
-| . | Title | Description |
+### Who to ask?
+|Critic category | Critics| Representative paper |
 |---|---|---|
-| RQ1| Can we assist LLMs by letting them think via state tracking? | e.g., for event reasoning or other QA tasks? |
-|RQ2|  (a) Can we define and develop a model of saliency for state changes?  (b) Do salient state changes assist LLMs w/ state tracking | Among the many possible state changes, can we identify the salient ones that will likely carry across different descriptions of the process. |
-|Resource| A reasoning benchmark for procedural understanding. | Small training partition, largely a test set |
-|RQ3| PDDL bottleneck models with an external planning engine | thinking of collaborating with Chris Callison Burch on his research idea |
-| RQ1| Multiple agents as MoE effectively collaborate | e.g., ethical values guidance via human or supervised on human feedback and factual via Web? |
+|Knowledge as guidance| pre-constructed KG | WebChild-KB [[1]]() |
+|  |pre-designed rules| Verb-rules [[8]]() |
+|  |pre-compiled sent.| hasPart-KB [[7]]() |
+|  |on-the-fly KG| inference graphs [[4]]() |
+|Feedback as guidance |human feedback| Interscript [[11]]() |
+|  |supervised feedback| Learning-to-repair [[9]]() |
+|  |RL feedback| [ACL 2023 submission]()  |
+|  |Self feedback| Self-Refine [[10]]() |
+|Schemas as guidance | dyadic theory| [in-progress]() |
+|  |state tracking: planning| [in-progress]() |
+|  |claim graphs: scholar | [in-progress]() |
 
 
+### What to ask?
+|Critiqueable output <br>category | Critiqueable output     | Representative paper  |
+|---|---|---|
+|Structured explanation| Inference graph | Curious Model [[5]]() |
+|| Reasoning chain | Quartet [[11]]() |
+|| Moral graph | [EMMA](https://github.com/nikett/emma) |
+|Unstructured explanation | Query understanding | MemPrompt [[x]]() |
+|Structured output| Script generation | Interscript [[11]]() |
+|| State tracking tensor | [in-progress]() |
+|Unstructured output| Moral acceptability | [in-progress]() |
 
-References:
+
+### When to ask?
+|Critiqueability category | Critiqueability | Representative paper  |
+|---|---|---|
+|Supervised|supervised detector||
+|Unsupervised| inconsistency detector|| 
+||Few-shot detector |Self-Refine [[10]]() |
+
+### How to apply?
+|Critique-apply category | Applying the critique | Representative paper  |
+|---|---|---|
+|at parameters| loss func | ProStruct [[3]]() | 
+|at input| input context | MemPrompt [[12]](memprompt.com) | 
+|at output| decoder, corrector | Learning-to-repair [[9]]() |
+
+### personalization
+
+
+#### Some open research questions:
+|  | Research Question |
+|---|---|
+|RQ| A collaborative framework for multi-critics |
+|RQ| Study the effect of noisy critics | 
+|RQ| Personalizing LLMs to user values, iteratively | 
+|RQ| Analsis of how RL generalizes memory | 
+|RQ| Iterative RL to generate better feedback | 
+|RQ| Can we assist LLMs on reasoning tasks through state tracking? |
+|RQ| Understanding salient state changes and their impact|
+|RQ| Create a reasoning test benchmark for procedural understanding |
+|RQ| Moral bottleneck models that rely on a theory of psychology |
+|RQ| PDDL bottleneck models with an external planning engine |
+
+
+#### References:
 1. Tandon, Niket, Gerard de Melo, Fabian M. Suchanek and Gerhard Weikum. “WebChild: harvesting and organizing commonsense knowledge from the web.” WSDM 2014
 2. Dalvi, Bhavana, Niket Tandon and Peter Clark. “Domain-Targeted, High Precision Knowledge Extraction.” TACL 2017
 3. Tandon, Niket, Bhavana Dalvi, Joel Grus, Wen-tau Yih, Antoine Bosselut and Peter Clark. “Reasoning about Actions and State Changes by Injecting Commonsense Knowledge.” EMNLP 2018
@@ -56,18 +83,8 @@ References:
 6. Rajagopal, Dheeraj, Niket Tandon, Peter Clarke, Bhavana Dalvi and Eduard H. Hovy. “What-if I ask you to explain: Explaining the effects of perturbations in procedural text.” EMNLP Findings 2020
 7. Bhakthavatsalam, Sumithra, Kyle Richardson, Niket Tandon and Peter Clark. “Do Dogs have Whiskers? A New Knowledge Base of hasPart Relations.” ArXiv abs/2006.07510 (2020)
 8. Clark, Peter, Bhavana Dalvi and Niket Tandon. “What Happened? Leveraging VerbNet to Predict the Effects of Actions in Procedural Text.” ArXiv abs/1804.05435 (2018)
-9. Tandon, Niket, Aman Madaan, Peter Clark and Yiming Yang. “Learning to repair: Repairing model output errors after deployment using a dynamic memory of feedback.” NAACL (2021).
+9. Tandon, Niket, Aman Madaan, Peter Clark and Yiming Yang. “Learning to repair: Repairing model output errors after deployment using a dynamic memory of feedback.” NAACL 2021.
 10. Madaan, Aman, Niket Tandon, et. al. "Self-Refine: Iterative Refinement with Self-Feedback." ArXiv abs/2303.17651 (2023)
 11. Tandon, Niket, Aman Madaan, Peter Clark, Keisuke Sakaguchi and Yiming Yang. “Interscript: A dataset for interactive learning of scripts through error feedback.” AAAI Workshop on Interactive ML (2021)
-
-
-- Who to ask : human agent, supervised agent, RL agent, self agent, KB agent, Web agent
-- When to ask: supervised detector, inconsistency detector, few shot detector
-- What to ask: critique the explanation, critique the understanding, 
-- How to use: 
-|---|---|
-|on the parameter side| as loss function or decoding function, as multitask learning|
-|on the input side| input context enrichment, in-context examples or prompt enrichment|
-|on the output side| decoders and correctors|
-|on the overall architecture side| as a bottleneck (retrievals, theories)|
+12. Madaan, Aman, Niket Tandon, Peter Clark and Yiming Yang. “Memory-assisted prompt editing to improve GPT-3 after deployment.” EMNLP 2022.
 
