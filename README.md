@@ -1,17 +1,17 @@
 # Natural Language Guided Reasoning
 
 ## Problem
-Models can be unreasonable and large models can be hard to finetune, can we guide them at inference time? Guidance takes up different forms such as corrections, knowledge, Web retrieval based guidance, and theories and schemas e.g. from psychology, and human preferences. Visionaries in AI and psychology have considered feedback and correction (i.e., guidance) as a requirement for truly intelligent AI systems that learn from errors and improve with time.
+Visionaries in AI and psychology have considered feedback and correction (i.e., guidance) as a requirement for truly intelligent AI systems that learn from errors and improve with time. However, models can be unreasonable and large models especially can be hard to finetune. Can we guide them at inference time? Guidance can take up different forms such as corrections, knowledge, Web retrieval based guidance, and theories and schemas e.g. from psychology, and human preferences. 
 
 ## Goal
-A computational model of the theory of recursive reminding that suggests humans record error context and correction received in their episodic memory for the future. To realize this, we need a general memory architecture where input = question, output = critiqueable output and then guidance from various agents can iteratively improve the output. This memory can be per user, thus leading to `personalized models`.
+A computational model of the "theory of recursive reminding" from psychology that suggests humans record error context and correction received in their episodic memory for the future. To realize such a computational model, we need a general memory architecture where input = question, output = critiqueable output and this receives guidance from various agents, to optionally, iteratively improve the output. To avoid repeating similar mistakes, this is recorded in a memory (analogous to episodic memory). This memory can be per user, thus leading to personalized models.
 
 ## Approach
 Iterative approach to effectively use guidance obtained from various critics. We build upon four key questions:
-- Who to ask
-- What to ask
-- When to ask
-- How to apply
+- Who to ask (sources of guidance in the memory component)
+- What to ask (critiqueable output y)
+- When to ask (arrow from critiqueable output y to memory component)
+- How to apply (arrow applying NL guidance to LM)
 
 
 ![NL Guided Reasoning](https://raw.githubusercontent.com/nikett/about/main/nl-guided-reasoning-annotated.jpg)
@@ -66,7 +66,7 @@ Iterative approach to effectively use guidance obtained from various critics. We
 
 
 ## Open research questions:
-|  | Research Question |
+|  | Research Question that I am currently pursuing or planning for 2023 |
 |---|---|
 |RQ| Personalizing LLMs to user values, iteratively | 
 |RQ| Moral bottleneck models relying on the dyadic theory from psychology |
