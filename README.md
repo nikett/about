@@ -14,7 +14,7 @@ Iterative approach to effectively use guidance obtained from various critics. We
 - How to apply
 
 
-![NL Guided Reasoning](https://raw.githubusercontent.com/nikett/about/main/nl-guided-reasoning.jpg)
+![NL Guided Reasoning](https://raw.githubusercontent.com/nikett/about/main/nl-guided-reasoning-annotated.jpg)
 
 
 ## Details
