@@ -80,14 +80,14 @@ Iterative approach to effectively use guidance obtained from various critics. We
 
 
 ## Selected references:
-1. Tandon, Niket, Gerard de Melo, Fabian M. Suchanek and Gerhard Weikum. “WebChild: harvesting and organizing commonsense knowledge from the web.” WSDM 2014
-2. Tandon, Niket, Bhavana Dalvi, Joel Grus, Wen-tau Yih, Antoine Bosselut and Peter Clark. “Reasoning about Actions and State Changes by Injecting Commonsense Knowledge.” EMNLP 2018
-3. Madaan, Aman, Dheeraj Rajagopal, Niket Tandon, Yiming Yang and Eduard H. Hovy. “Could you give me a hint? Generating inference graphs for defeasible reasoning.” EMNLP Findings 2021
-4. Madaan, Aman, Niket Tandon, Dheeraj Rajagopal, Peter Clark, Yiming Yang and Eduard H. Hovy. “Think about it! Improving defeasible reasoning by first modeling the question scenario.” EMNLP 2021
-5. Rajagopal, Dheeraj, Niket Tandon, Peter Clarke, Bhavana Dalvi and Eduard H. Hovy. “What-if I ask you to explain: Explaining the effects of perturbations in procedural text.” EMNLP Findings 2020
-6. Tandon, Niket, Aman Madaan, Peter Clark and Yiming Yang. “Learning to repair: Repairing model output errors after deployment using a dynamic memory of feedback.” NAACL 2022.
-7. Tandon, Niket, Aman Madaan, Peter Clark, Keisuke Sakaguchi and Yiming Yang. “Interscript: A dataset for interactive learning of scripts through error feedback.” AAAI Workshop on Interactive ML (2021)
-8. Madaan, Aman, Niket Tandon, Peter Clark and Yiming Yang. “Memory-assisted prompt editing to improve GPT-3 after deployment.” EMNLP 2022.
-9. Madaan, Aman, Niket Tandon, et. al. "Self-Refine: Iterative Refinement with Self-Feedback." ArXiv abs/2303.17651 (2023)
+1. Niket, Gerard de Melo, Fabian M. Suchanek and Gerhard Weikum. “WebChild: harvesting and organizing commonsense knowledge from the web.” WSDM 2014
+2. Niket, Bhavana, Joel, Wen-tau Yih, Antoine and Peter Clark. “Reasoning about Actions and State Changes by Injecting Commonsense Knowledge.” EMNLP 2018
+3. Aman, Dheeraj, Niket, Yiming Yang and Eduard H. Hovy. “Could you give me a hint? Generating inference graphs for defeasible reasoning.” EMNLP Findings 2021
+4. Aman, Niket, Dheeraj, Peter Clark, Yiming Yang and Eduard H. Hovy. “Think about it! Improving defeasible reasoning by first modeling the question scenario.” EMNLP 2021
+5. Dheeraj, Niket, Peter Clarke, Bhavana and Eduard H. Hovy. “What-if I ask you to explain: Explaining the effects of perturbations in procedural text.” EMNLP Findings 2020
+6. Niket, Aman, Peter Clark and Yiming Yang. “Learning to repair: Repairing model output errors after deployment using a dynamic memory of feedback.” NAACL 2022.
+7. Niket, Aman, Peter Clark, Keisuke and Yiming Yang. “Interscript: A dataset for interactive learning of scripts through error feedback.” AAAI Workshop on Interactive ML (2021)
+8. Aman, Niket, Peter Clark and Yiming Yang. “Memory-assisted prompt editing to improve GPT-3 after deployment.” EMNLP 2022.
+9. Aman, Niket, et. al. "Self-Refine: Iterative Refinement with Self-Feedback." ArXiv abs/2303.17651 (2023)
 
 
