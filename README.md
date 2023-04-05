@@ -1,5 +1,8 @@
 # Natural Language Guided Reasoning
 
+![Bigger landscape](https://raw.githubusercontent.com/nikett/about/main/criterium.jpg)
+
+
 ## Problem
 Visionaries in AI and psychology have considered feedback and correction (i.e., guidance) as a requirement for truly intelligent AI systems that learn from errors and improve with time. However, models can be unreasonable and large models especially can be hard to finetune. Can we guide them at inference time? Guidance can take up different forms such as corrections, knowledge, Web retrieval based guidance, and theories and schemas e.g. from psychology, and human preferences. 
 
