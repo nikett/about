@@ -1,6 +1,6 @@
 # Natural Language Guided Reasoning
 
-![Bigger landscape](https://raw.githubusercontent.com/nikett/about/main/criterium.jpg)
+![Bigger landscape](https://raw.githubusercontent.com/nikett/about/main/criterium-annotated.jpg)
 
 
 ## Problem
