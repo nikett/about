@@ -18,11 +18,11 @@ Iterative approach to effectively use guidance obtained from various critics. We
 |Critic category        | Critics                 | Representative papers     |
 |---                    |---                      |---                        |
 |Knowledge as guidance  |Pre-constructed KG       | WebChild-KB [[1]](https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/commonsense/webchild)       |
-|                       |On-the-fly KG            | Inference graphs [[4]](https://aclanthology.org/2021.findings-acl.456.pdf)  |
-|Feedback as guidance   |Human feedback           | Interscript [[8]](https://www.semanticscholar.org/paper/Interscript%3A-A-dataset-for-interactive-learning-of-Tandon-Madaan/07d5bba7d2bc511c88eb143a926d3c297298ad15) |
-|                       |Supervised feedback      | Learning-to-repair [[7]](https://aclanthology.org/2022.findings-naacl.26/)|
+|                       |On-the-fly KG            | Inference graphs [[3]](https://aclanthology.org/2021.findings-acl.456.pdf)  |
+|Feedback as guidance   |Human feedback           | Interscript [[7]](https://www.semanticscholar.org/paper/Interscript%3A-A-dataset-for-interactive-learning-of-Tandon-Madaan/07d5bba7d2bc511c88eb143a926d3c297298ad15) |
+|                       |Supervised feedback      | Learning-to-repair [[6]](https://aclanthology.org/2022.findings-naacl.26/)|
 |                       |RL feedback              | [ACL 2023 submission](https://niket.tandon.info)   |
-|                       |Self feedback            | Self-Refine [[10]](https://selfrefine.info/)      |
+|                       |Self feedback            | Self-Refine [[9]](https://selfrefine.info/)      |
 |Schemas as guidance    |Dyadic theory            | [in-progress](https://github.com/allenai/emma/tree/dev)           |
 |                       |State tracking: planning | [in-progress](https://github.com/allenai/openpi_v2)           |
 |                       |Claim graphs: scholar    | [in-progress](https://github.com/nikett/claimgraph)           |
@@ -33,10 +33,10 @@ Iterative approach to effectively use guidance obtained from various critics. We
 ### What to ask?
 |Critiqueable category    | Critiqueable output     | Representative papers  |
 |---                      |---                      |---                     |
-|Structured explanation   | Inference graph         | Curious [[5]](https://aclanthology.org/2021.emnlp-main.508/)  |
-|                         | Reasoning chain         | Quartet [[6]](https://aclanthology.org/2020.findings-emnlp.300.pdf)       |
-|Unstructured explanation | Query understanding     | MemPrompt [[9]](https://memprompt.com) | 
-|Structured output        | Script generation       | Interscript [[8]](https://www.semanticscholar.org/paper/Interscript%3A-A-dataset-for-interactive-learning-of-Tandon-Madaan/07d5bba7d2bc511c88eb143a926d3c297298ad15) |
+|Structured explanation   | Inference graph         | Curious [[4]](https://aclanthology.org/2021.emnlp-main.508/)  |
+|                         | Reasoning chain         | Quartet [[5]](https://aclanthology.org/2020.findings-emnlp.300.pdf)       |
+|Unstructured explanation | Query understanding     | MemPrompt [[8]](https://memprompt.com) | 
+|Structured output        | Script generation       | Interscript [[7]](https://www.semanticscholar.org/paper/Interscript%3A-A-dataset-for-interactive-learning-of-Tandon-Madaan/07d5bba7d2bc511c88eb143a926d3c297298ad15) |
 |                         | Moral graph             | [EMMA](https://github.com/nikett/emma) |
 |                         | State tracking tensor   | [in-progress](https://github.com/allenai/openpi_v2)         |
 
@@ -46,16 +46,16 @@ Iterative approach to effectively use guidance obtained from various critics. We
 |Critiqueability category | Critiqueability       | Representative papers |
 |---                      |---                    |---                    |
 |Unsupervised             | Inconsistency detector| [EMMA](https://github.com/nikett/emma)| 
-|                         | Few-shot detector     | Self-Refine [[10]](https://selfrefine.info/) |
+|                         | Few-shot detector     | Self-Refine [[9]](https://selfrefine.info/) |
 
 
 
 ### How to apply?
 |Critique-apply category | Applying the critique | Representative papers  |
 |---                     |---                    |---                     |
-|at the input            | Input context         | MemPrompt [[9]](https://memprompt.com) | 
-|at the output           | Decoder, corrector    | Learning-to-repair [[7]](https://aclanthology.org/2022.findings-naacl.26/) |
-|at the parameters       | Loss function         | ProStruct [[3]](https://aclanthology.org/D18-1006.pdf) |
+|at the input            | Input context         | MemPrompt [[8]](https://memprompt.com) | 
+|at the output           | Decoder, corrector    | Learning-to-repair [[6]](https://aclanthology.org/2022.findings-naacl.26/) |
+|at the parameters       | Loss function         | ProStruct [[2]](https://aclanthology.org/D18-1006.pdf) |
 |                        | Causal tracing        | [in-progress](https://niket.tandon.info) |
 
 
@@ -81,14 +81,13 @@ Iterative approach to effectively use guidance obtained from various critics. We
 
 ## Selected references:
 1. Tandon, Niket, Gerard de Melo, Fabian M. Suchanek and Gerhard Weikum. “WebChild: harvesting and organizing commonsense knowledge from the web.” WSDM 2014
-2. Dalvi, Bhavana, Niket Tandon and Peter Clark. “Domain-Targeted, High Precision Knowledge Extraction.” TACL 2017
-3. Tandon, Niket, Bhavana Dalvi, Joel Grus, Wen-tau Yih, Antoine Bosselut and Peter Clark. “Reasoning about Actions and State Changes by Injecting Commonsense Knowledge.” EMNLP 2018
-4. Madaan, Aman, Dheeraj Rajagopal, Niket Tandon, Yiming Yang and Eduard H. Hovy. “Could you give me a hint? Generating inference graphs for defeasible reasoning.” EMNLP Findings 2021
-5. Madaan, Aman, Niket Tandon, Dheeraj Rajagopal, Peter Clark, Yiming Yang and Eduard H. Hovy. “Think about it! Improving defeasible reasoning by first modeling the question scenario.” EMNLP 2021
-6. Rajagopal, Dheeraj, Niket Tandon, Peter Clarke, Bhavana Dalvi and Eduard H. Hovy. “What-if I ask you to explain: Explaining the effects of perturbations in procedural text.” EMNLP Findings 2020
-7. Tandon, Niket, Aman Madaan, Peter Clark and Yiming Yang. “Learning to repair: Repairing model output errors after deployment using a dynamic memory of feedback.” NAACL 2022.
-8. Tandon, Niket, Aman Madaan, Peter Clark, Keisuke Sakaguchi and Yiming Yang. “Interscript: A dataset for interactive learning of scripts through error feedback.” AAAI Workshop on Interactive ML (2021)
-9. Madaan, Aman, Niket Tandon, Peter Clark and Yiming Yang. “Memory-assisted prompt editing to improve GPT-3 after deployment.” EMNLP 2022.
-10. Madaan, Aman, Niket Tandon, et. al. "Self-Refine: Iterative Refinement with Self-Feedback." ArXiv abs/2303.17651 (2023)
+2. Tandon, Niket, Bhavana Dalvi, Joel Grus, Wen-tau Yih, Antoine Bosselut and Peter Clark. “Reasoning about Actions and State Changes by Injecting Commonsense Knowledge.” EMNLP 2018
+3. Madaan, Aman, Dheeraj Rajagopal, Niket Tandon, Yiming Yang and Eduard H. Hovy. “Could you give me a hint? Generating inference graphs for defeasible reasoning.” EMNLP Findings 2021
+4. Madaan, Aman, Niket Tandon, Dheeraj Rajagopal, Peter Clark, Yiming Yang and Eduard H. Hovy. “Think about it! Improving defeasible reasoning by first modeling the question scenario.” EMNLP 2021
+5. Rajagopal, Dheeraj, Niket Tandon, Peter Clarke, Bhavana Dalvi and Eduard H. Hovy. “What-if I ask you to explain: Explaining the effects of perturbations in procedural text.” EMNLP Findings 2020
+6. Tandon, Niket, Aman Madaan, Peter Clark and Yiming Yang. “Learning to repair: Repairing model output errors after deployment using a dynamic memory of feedback.” NAACL 2022.
+7. Tandon, Niket, Aman Madaan, Peter Clark, Keisuke Sakaguchi and Yiming Yang. “Interscript: A dataset for interactive learning of scripts through error feedback.” AAAI Workshop on Interactive ML (2021)
+8. Madaan, Aman, Niket Tandon, Peter Clark and Yiming Yang. “Memory-assisted prompt editing to improve GPT-3 after deployment.” EMNLP 2022.
+9. Madaan, Aman, Niket Tandon, et. al. "Self-Refine: Iterative Refinement with Self-Feedback." ArXiv abs/2303.17651 (2023)
 
 
