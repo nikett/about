@@ -31,10 +31,10 @@ Iterative approach to effectively use guidance obtained from various critics. We
 |                       |Supervised feedback      | Learning-to-repair [[7]](https://aclanthology.org/2022.findings-naacl.26/)|
 |                       |RL feedback              | [ACL 2023 submission](https://niket.tandon.info)   |
 |                       |Self feedback            | Self-Refine [[9]](https://selfrefine.info/)      |
-|Schemas as guidance    |Dyadic theory            | [in-progress](https://github.com/allenai/emma/tree/dev)           |
-|                       |State tracking: planning | [in-progress](https://github.com/allenai/openpi_v2)           |
-|                       |Claim graphs: scholar    | [in-progress](https://github.com/nikett/claimgraph)           |
-|Preference as guidance |User personalization     | [in-progress](https://niket.tandon.info)           |
+|Schemas as guidance    |Dyadic theory            | [[in-progress]](https://github.com/allenai/emma/tree/dev)           |
+|                       |State tracking: planning | [[in-progress]](https://github.com/allenai/openpi_v2)           |
+|                       |Claim graphs: scholar    | [[in-progress]](https://github.com/nikett/claimgraph)           |
+|Preference as guidance |User personalization     | [[in-progress]](https://niket.tandon.info)           |
 
 
 
@@ -42,11 +42,11 @@ Iterative approach to effectively use guidance obtained from various critics. We
 |Critiqueable category    | Critiqueable output     | Representative papers  |
 |---                      |---                      |---                     |
 |Structured explanation   | Inference graph         | Curious [[4]](https://aclanthology.org/2021.emnlp-main.508/)  |
-|                         | Reasoning chain         | Quartet [[3]](https://aclanthology.org/2020.findings-emnlp.300.pdf)       |
+|                         | Reasoning chain         | Quartet [[3]](https://aclanthology.org/2020.findings-emnlp.300.pdf) , CoT [[in-progress]](https://niket.tandon.info) |
 |Unstructured explanation | Query understanding     | MemPrompt [[8]](https://memprompt.com) | 
 |Structured output        | Script generation       | Interscript [[6]](https://www.semanticscholar.org/paper/Interscript%3A-A-dataset-for-interactive-learning-of-Tandon-Madaan/07d5bba7d2bc511c88eb143a926d3c297298ad15) |
 |                         | Moral graph             | [EMMA](https://github.com/nikett/emma) |
-|                         | State tracking tensor   | [in-progress](https://github.com/allenai/openpi_v2)         |
+|                         | State tracking tensor   | [[in-progress]](https://github.com/allenai/openpi_v2)         |
 
 
 
@@ -64,7 +64,7 @@ Iterative approach to effectively use guidance obtained from various critics. We
 |at the input            | Input context         | MemPrompt [[8]](https://memprompt.com) | 
 |at the output           | Decoder, corrector    | Learning-to-repair [[7]](https://aclanthology.org/2022.findings-naacl.26/) |
 |at the parameters       | Loss function         | ProStruct [[2]](https://aclanthology.org/D18-1006.pdf) |
-|                        | Causal tracing        | [in-progress](https://niket.tandon.info) |
+|                        | Causal tracing        | [[in-progress]](https://niket.tandon.info) |
 
 
 
