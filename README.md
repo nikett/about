@@ -68,23 +68,28 @@ Iterative approach to effectively use guidance obtained from various critics. We
 
 
 
-## Open research questions:
-|  | Research Question that I am currently pursuing or planning for 2023 |
-|---|---|
-|RQ| Personalizing LLMs to user values, iteratively | 
-|RQ| Moral bottleneck models relying on the dyadic theory from psychology |
-|RQ| A collaborative framework for multi-critics |
-|RQ| Study the effect of noisy critics | 
-|RQ| Analyzing how RL generalizes memory | 
-|RQ| Iterative RL to generate better feedback | 
-|RQ| Can we assist LLMs on reasoning tasks through state tracking? |
-|RQ| Understanding salient state changes and their impact|
-|RQ| Create a reasoning test benchmark for procedural understanding |
-|RQ| Planning bottleneck models using an external engine to plan |
-|RQ| What is the best representation of memory, how does memory evolve |
-|RQ| Effect of adversarial feedback on the memory |
-|RQ| Effect of faith harming feedback in the memory in a multiuser setup |
+## Current/ Q2:
+| Topic | Research Questions | Collaborators | Target |
+|---    |---                 |---            |---     |
+| Personalizing LLMs for user values | How well can LLMs be swayed towards a human's values? What about malicious users? | Bodhi, EunJeong (UBC) | NL Reasoning workshop @ACL, and EMNLP |
+| Personalizing LLMs for procedures  | How important is personalization in procedural text? Can LLMs generate personalized procedural content?   | Yash | NL Reasoning workshop @ACL |
+| OpenPI 2.0 | Understanding salient state changes and their impact | Harry, HaiNiu, Abhinav | EMNLP, arxiv May 2023 | 
+| Tracking for LLMs | Can we assist LLMs on reasoning tasks through state tracking? | Yash (summer internship) | arxiv Aug 2023 |
+| Self-Refine 2.0 | End2end system for iterative refinement | Aman, Aristo, Mosaic, others | NeurIPS, arxiv May 2023 | 
+| Teachable CoT | Can we leverage step-by-step reasoning for step-by-step feedback? | Veronica (UPenn), Harry, Aristo, Mosaic, others | arxiv Aug 2023 | 
+| Model editing | How well does model editing in MEMIT apply to commonsense facts? | Lorraine (Mosaic), Sarah (Aristo), UMass students | EMNLP, arxiv May 2023 | 
+| S2 claims | Can LLMs uncover underlying assumptions for a claim? Can we use them for inference? | Neset (Auckland), David Wadden (S2) | EMNLP, arxiv May 2023 | 
+| Moral bottleneck models | How well can LLMs rely on the dyadic theory from psychology? | Kurt Gray, Daniaca, Yuling, Nouha, Valentina | Nature Aug 2023 |
+| Moral reasoning | Abductively generate moral updates with explanations | UW student, Nouha, Valentina, Liwei, Yuling | EMNLP 2023, arxiv May 2023 | 
 
+## Q3/ Q4 ideas:
+- A collaborative framework for multi-critics
+- Study the effect of noisy critics
+- Analyzing how RL generalizes memory
+- Iterative RL to generate better feedback
+- Create a reasoning test benchmark for procedural understanding
+- Planning bottleneck models using an external engine to plan
+- What is the best representation of memory, how does memory evolve
 
 
 ## Selected references:
