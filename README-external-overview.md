@@ -1,8 +1,8 @@
 
 ###    NL Guided Reasoning
 <br/>
-  <p align="center">
-    <img width="75%" src="https://raw.githubusercontent.com/nikett/about/main/nl-guided-reasoning-annotated.jpg" />
+  <p align="left">
+    <img width="45%" src="https://raw.githubusercontent.com/nikett/about/main/nl-guided-reasoning-annotated.jpg" />
   </p>
 
 
