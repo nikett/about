@@ -19,7 +19,7 @@ We suggest an iterative approach to effectively use guidance obtained from vario
 
 
 ## Approach: details
-In the last years, I have answered some aspects of these big-four research questions. Firstly, on sources of guidance, there are four major categories: Knowledge as guidance, Feedback as guidance, neuro-symbolic schemas as guidance, human preference as guidance. Each category comes with one or more critics, depicted in the table below. 
+In the last years, we have answered _some_ aspects of these big-four research questions. Firstly, on sources of guidance, there are four major categories: Knowledge as guidance, Feedback as guidance, neuro-symbolic schemas as guidance, human preference as guidance. Each category comes with one or more critics, depicted in the table below. 
 
 ### Who to ask?
 |Critic category        | Critics                 | Representative papers     |
@@ -28,18 +28,19 @@ In the last years, I have answered some aspects of these big-four research quest
 |                       |On-the-fly KG            | Inference graphs [[5]](https://aclanthology.org/2021.findings-acl.456.pdf)  |
 |Feedback as guidance   |Human feedback           | Interscript [[6]](https://www.semanticscholar.org/paper/Interscript%3A-A-dataset-for-interactive-learning-of-Tandon-Madaan/07d5bba7d2bc511c88eb143a926d3c297298ad15) |
 |                       |Supervised feedback      | Learning-to-repair [[7]](https://aclanthology.org/2022.findings-naacl.26/)|
-|                       |RL feedback              | [ACL 2023 submission](https://niket.tandon.info)   |
+|                       |RL feedback              | RL4F [[10]](https://niket.tandon.info)   |
 |                       |Self feedback            | Self-Refine [[9]](https://selfrefine.info/)      |
-|Schemas as guidance    |Dyadic theory            | [[in-progress]](https://github.com/allenai/emma/tree/dev)           |
+|Schemas as guidance    |Dyadic theory of harm    | [[in-progress]](https://github.com/allenai/emma/tree/dev)        |
 |                       |State tracking: planning | [[in-progress]](https://github.com/allenai/openpi_v2)           |
 |                       |Claim graphs: scholar    | [[in-progress]](https://github.com/nikett/claimgraph)           |
 |Preference as guidance |User personalization     | [[in-progress]](https://niket.tandon.info)           |
 
 
-The second question is what should be the output that must be critiqued. Structued or unstructured? 
 
 
 ### What to ask?
+The second question is what should be the output that must be critiqued. Structued or unstructured? 
+
 |Critiqueable category    | Critiqueable output     | Representative papers  |
 |---                      |---                      |---                     |
 |Structured explanation   | Inference graph         | Curious [[4]](https://aclanthology.org/2021.emnlp-main.508/)  |
@@ -50,19 +51,21 @@ The second question is what should be the output that must be critiqued. Structu
 |                         | State tracking tensor   | [[in-progress]](https://github.com/allenai/openpi_v2)         |
 
 
-The third question is whether the output needs to be critiqued? We optimize for should be able to use feedback only when necessary. 
 
 
 ### When to ask?
+The third question is whether the output needs to be critiqued? We optimize for should be able to use feedback only when necessary. 
+
 |Critiqueability category | Critiqueability       | Representative papers |
 |---                      |---                    |---                    |
 |Unsupervised             | Inconsistency detector| [EMMA](https://github.com/nikett/emma)| 
 |                         | Few-shot detector     | Self-Refine [[9]](https://selfrefine.info/) |
 
 
-The final question is crucial as well, how to update the model behavior by using the guidance? It could be done at the input (enhancing the context), at the output (with a supervised corrector) or update the model parameters (for comparabLMs  smaller models or when models weights are accessible).
 
 ### How to apply?
+The final question is how to update the model behavior by using the guidance? It could be done at the input (enhancing the context), at the output (with a supervised corrector) or update the model parameters (for comparabLMs  smaller models or when models weights are accessible).
+
 |Critique-apply category | Applying the critique | Representative papers  |
 |---                     |---                    |---                     |
 |at the input            | Input context         | MemPrompt [[8]](https://memprompt.com) | 
@@ -88,4 +91,5 @@ LLMs have several important aspects with open research questions that we abbrevi
 7. Niket, Aman, Peter et. al. “Learning to repair: Repairing model output errors after deployment using a dynamic memory of feedback.” NAACL 2022.
 8. Aman, Niket, Peter et. al. “Memory-assisted prompt editing to improve GPT-3 after deployment.” EMNLP 2022.
 9. Aman, Niket, et. al. "Self-Refine: Iterative Refinement with Self-Feedback." ArXiv abs/2303.17651 (2023)
+10. Feyza, and others, Niket. "RL4F." ACL 2023
 
