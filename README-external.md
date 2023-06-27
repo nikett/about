@@ -4,23 +4,24 @@
 
 
 ## Problem
-Visionaries in AI and psychology have considered feedback and correction (i.e., guidance) as a requirement for truly intelligent AI systems that learn from errors and improve with time. However, models can be unreasonable and large models especially can be hard to finetune. Can we guide them at inference time? Guidance can take up different forms such as corrections, knowledge, Web retrieval based guidance, and theories and schemas e.g. from psychology, and human preferences. 
+Feedback and correction (i.e., guidance) to learn from errors and improve with time, is a requirement for truly intelligent AI systems. However, models can be unreasonable and large models can be especially prohibitive to finetune. The central problem we address is "Can we guide them at inference time?" Guidance can take up different forms such as corrections, knowledge, Web based guidance, and theories and schemas e.g. from psychology, and human preferences. 
 
 ## Goal
-A computational model of the "theory of recursive reminding" from psychology that suggests humans record error context and correction received in their episodic memory for the future. To realize such a computational model, we need a general memory architecture where input = question, output = critiqueable output and this receives guidance from various agents, to optionally, iteratively improve the output. To avoid repeating similar mistakes, this is recorded in a memory (analogous to episodic memory). This memory can be per user, thus leading to personalized models.
+We are inspired by the "theory of recursive reminding" from Psychology which suggests that humans record error context and correction received in their episodic memory for the future. Our goal is a general memory architecture where input = question, output = critiqueable output and the model receives guidance from various agents, potentially iteratively. To avoid repeating similar mistakes, mistakes with context is recorded in a memory (analogous to episodic memory). This memory can also be per user, resulting in personalized models.
 
-## Approach
-Iterative approach to effectively use guidance obtained from various critics. We build upon four key questions:
-- Who to ask (sources of guidance in the memory component)
-- What to ask (critiqueable output y)
-- When to ask (arrow from critiqueable output y to memory component)
-- How to apply (arrow applying NL guidance to LM)
+## Approach: overview
+We suggest an iterative approach to effectively use guidance obtained from various critics, that builds upon four key questions:
+- Who to ask (sources of guidance in the figure)
+- What to ask (various forms that the critiqueable output y can take)
+- When to ask (ask when necessary, depicted in the figure with. anarrow from critiqueable output y to memory component)
+- How to apply (various ways of injecting this guidance, depicted in the figure with an arrow applying NL guidance to LM)
 
 
 ![NL Guided Reasoning](https://raw.githubusercontent.com/nikett/about/main/nl-guided-reasoning-annotated.jpg)
 
 
-## Details
+## Approach: details
+In the last years, I have answered some aspects of these big-four research questions. Firstly, on sources of guidance, there are four major categories: Knowledge as guidance, Feedback as guidance, neuro-symbolic schemas as guidance, human preference as guidance. Each category comes with one or more critics, depicted in the table below.
 
 ### Who to ask?
 |Critic category        | Critics                 | Representative papers     |
