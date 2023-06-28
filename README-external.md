@@ -62,7 +62,7 @@ The third question is whether the output needs to be critiqued? We optimize for 
 
 
 ### How to apply?
-The final question is how to update the model behavior by using the guidance? It could be done at the input (enhancing the context), at the output (with a supervised corrector) or update the model parameters (for comparabLMs  smaller models or when models weights are accessible).
+The final question is how to update the model behavior by using the guidance? It could be done at the input (enhancing the context), at the output (with a supervised corrector) or update the model parameters (for relatively smaller models or when models weights are accessible).
 
 |Critique-apply category | Applying the critique | Representative papers  |
 |---                     |---                    |---                     |
