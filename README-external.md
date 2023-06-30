@@ -75,7 +75,7 @@ The final question is how to update the model behavior by using the guidance? It
 ## Positioning in the big picture of ChatGPT and LLMs
 LLMs have several important aspects with open research questions that we abbreviate as "The CRITERIUM". LLMs must be controllable, responsible, interactive, trustworthy, environmental friendly, reasonable, be able to induce facts, and work in a multimodal+multilingual setting. The proposed topic of natural language guided reasoning broadly covers two of these aspects *interactive* systems that learn from errors and are teachable and personalized; and *reasonable* systems that exhibit for instance commonsense and moral reasoning. We also strive for the models to be trustworthy and faithful in their reasoning. Within each aspect of the CRITERIUM, there are several open research questions that I am currently working on, and I and the research community at large will continue to work on.
 
-![Bigger landscape](https://raw.githubusercontent.com/nikett/about/main/criterium-annotated.jpg)
+![Bigger landscape](https://raw.githubusercontent.com/nikett/about/main/criterium-annotated-vertical.jpg)
 
 
 
